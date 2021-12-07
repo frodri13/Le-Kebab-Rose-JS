@@ -10,7 +10,7 @@ import { useContext } from "react";
 import { ChoiceContext } from "../../context/ChoiceContext";
 
 function Menu() {
-  const { choice, setChoice } = useContext(ChoiceContext);
+  const { setChoice } = useContext(ChoiceContext);
 
   return (
     <div className="menu">
