@@ -11,7 +11,6 @@ import { ChoiceContext } from "../../context/ChoiceContext";
 
 function Menu() {
   const { choice, setChoice } = useContext(ChoiceContext);
-  console.log(choice);
 
   return (
     <div className="menu">

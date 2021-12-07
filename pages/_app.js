@@ -4,7 +4,7 @@ import { ChoiceContext } from "../context/ChoiceContext";
 import { useState, useMemo } from "react";
 
 function MyApp({ Component, pageProps }) {
-  const [choice, setChoice] = useState("hello from context");
+  const [choice, setChoice] = useState("entree");
 
   const providerValue = useMemo(
     () => ({ choice, setChoice }),
