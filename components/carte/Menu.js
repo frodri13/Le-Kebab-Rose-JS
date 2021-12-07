@@ -6,11 +6,16 @@ import kebab from "../../public/kebab.png";
 import dessert from "../../public/dessert.svg";
 import sandwich from "../../public/sandwich.svg";
 import taco from "../../public/taco.svg";
+import { useContext } from "react";
+import { ChoiceContext } from "../../context/ChoiceContext";
 
 function Menu() {
+  const { choice, setChoice } = useContext(ChoiceContext);
+  console.log(choice);
+
   return (
     <div className="menu">
-      <div>
+      <div onClick={() => setChoice("entree")}>
         <Image
           src={salad}
           alt={`SVG image of a salad.`}
@@ -20,7 +25,7 @@ function Menu() {
 
         <h3>ENTREE</h3>
       </div>
-      <div>
+      <div onClick={() => setChoice("sandwich")}>
         <Image
           src={sandwich}
           alt={`SVG image of a sandwich.`}
@@ -30,7 +35,7 @@ function Menu() {
 
         <h3>SANDWICH</h3>
       </div>
-      <div>
+      <div onClick={() => setChoice("panini")}>
         <Image
           src={sandwich}
           alt={`SVG image of a sandwich.`}
@@ -40,7 +45,7 @@ function Menu() {
 
         <h3>PANINI</h3>
       </div>
-      <div>
+      <div onClick={() => setChoice("burger")}>
         <Image
           src={burger}
           alt={`SVG image of a pink burger.`}
@@ -49,7 +54,7 @@ function Menu() {
         />
         <h3>BURGER</h3>
       </div>
-      <div>
+      <div onClick={() => setChoice("taco")}>
         <Image
           src={taco}
           alt={`SVG image of a taco.`}
@@ -59,7 +64,7 @@ function Menu() {
 
         <h3>TEX MEX</h3>
       </div>
-      <div>
+      <div onClick={() => setChoice("assiette")}>
         <Image
           src={kebab}
           alt={`SVG image of a Kebab.`}
@@ -69,7 +74,7 @@ function Menu() {
 
         <h3>ASSIETTE</h3>
       </div>
-      <div>
+      <div onClick={() => setChoice("dessert")}>
         <Image
           src={dessert}
           alt={`SVG image of a cupcake.`}
@@ -79,7 +84,7 @@ function Menu() {
 
         <h3>DESSERT</h3>
       </div>
-      <div>
+      <div onClick={() => setChoice("boisson")}>
         <Image
           src={drink}
           alt={`SVG image of a bottle.`}
